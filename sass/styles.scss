@@ -1,0 +1,62 @@
+$color-first:#9356DC;
+$color-second:#FF79DA;
+$color-third:#99E2D0;
+$color-grey:#f6f6f6;
+$color-bottom:#353535;
+$radius:20px;
+@import "font";
+@import "mixin";
+
+body{
+    font-family: robotoregular, arial, sans-serif;
+}
+
+.container{
+    width: auto;
+}
+
+@import "header";
+@import "explore";
+@import "elements";
+@import "fonctionnement";
+@import "resto";
+
+footer{
+    height: 195px;
+    background-color: $color-bottom;
+    padding: 20px;
+    color: white;
+    >h3{
+        font-family: shrikhand;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    >ul{
+        padding: 0;
+        font-size: 0.9rem;
+        margin-top: 20px;
+        >li{
+            list-style-type: none;
+            margin-bottom: 10px;
+            >a{
+                text-decoration: none;
+                color:white;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
