@@ -3,6 +3,11 @@
     padding: 20px 20px 60px 20px;
     display: flex;
     flex-direction: column;
+    >h1{
+        @media (min-width: 600px) {
+            text-align: center;
+        } 
+    }
    
 }
 
@@ -33,6 +38,14 @@
                     font-size: 1.1rem;
                     font-weight: bold;
                     margin-bottom: 4px;
+                    @media (min-width: 600px) {
+                    text-align: center;
+                    }
+                }
+                .resto_location{
+                    @media (min-width: 600px) {
+                    text-align: center;
+                    }
                 }
                 .resto__heart{
                     position: absolute;
@@ -42,10 +55,9 @@
                 }
             }
         } 
-        
     }  
- 
 }
+
 .resto__new{
     width: 80px;
     height: 30PX;

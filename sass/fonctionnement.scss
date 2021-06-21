@@ -3,6 +3,12 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 20px;
+    >h1{
+        @media (min-width: 600px) {
+            text-align: center;
+        } 
+    }
+    
 }
 
 .step{
@@ -25,6 +31,9 @@
         @include box($color-grey);
         @include center;
         @include shadow (10%);
+        @media (min-width: 600px) {
+            width: 98%;
+        } 
         >i{
             @include icone(darken($color-grey,50%));
             
@@ -34,12 +43,19 @@
             font-weight: bold;
             position: absolute;
             left: 70px;
+            @media (min-width: 600px) {
+                text-align: center;
+                position: static;
+            } 
         }
     }
     &__box--2{
         @include box(lighten($color-first,37%));
         @include center;
         @include shadow (10%);
+        @media (min-width: 600px) {
+            width: 98%;
+        } 
         >i{
             @include icone($color-first);            
         }
@@ -48,6 +64,10 @@
             font-weight: bold;
             position: absolute;
             left: 70px;
+            @media (min-width: 600px) {
+                text-align: center;
+                position: static;
+            }
         }
     }
 }

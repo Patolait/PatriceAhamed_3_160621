@@ -13,6 +13,9 @@ body{
 
 .container{
     width: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 @import "header";
@@ -21,6 +24,84 @@ body{
 @import "fonctionnement";
 @import "resto";
 @import "footer";
+
+figure{
+    height: 280px;
+    width: 100%;
+    margin: 0;
+    >img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.menu{
+    height: auto;
+    background-color: $color-grey;
+    border-radius: 20px 20px 0px 0px;
+    margin-top: 0;
+    width: 100%;
+    margin-top: -40px;
+    &__top{
+        margin: 0px 20px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &__title{
+            font-family: shrikhand;
+        }
+        &__heart{
+            position: absolute;
+            right: 20px;
+            font-size: 1.3rem;
+        }   
+    }
+    &__element{
+        margin: 15px;
+        &__title{
+            font-family: robotothin;
+            text-transform: uppercase;
+        }
+        &__line{
+            width: 20%;
+            height: 3px;
+            background-color: $color-third;
+            margin: 5px 0px 0px 0px;
+        }
+        &__box{
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            border-radius: $radius;
+            padding: 15px 0px;
+            margin: 15px 0px;
+            position: relative;
+            @include shadow (10%);
+            &__title{
+                font-size: 1rem;
+                font-weight: bold;
+                margin: 0px 10px;
+            }
+            &__text{
+                font-family: robotothin;
+                margin:5px 10px;
+            }
+            &__price{
+                position: absolute;
+                right:25px;
+                bottom: 19px;
+                font-weight: bold;
+                color: $color-bottom;
+            }
+            
+        }
+    }
+    .btn{
+        margin-bottom: 80px;
+        margin-top: 50px ;
+    }
+}
 
 
 
