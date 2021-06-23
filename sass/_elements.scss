@@ -1,0 +1,8 @@
+.btn{
+    @include btn;
+    >span{
+        font-family: robotoregular,sans-serif;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+}

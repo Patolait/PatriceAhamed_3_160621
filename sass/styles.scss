@@ -4,11 +4,26 @@ $color-third:#99E2D0;
 $color-grey:#f6f6f6;
 $color-bottom:#353535;
 $radius:20px;
-@import "font";
+
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('shrikhand-regular-webfont.woff2') format('woff2'),
+         url('shrikhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+    font-family: 'Robotoregular';
+    src: url('/font/Roboto-Regular.ttf');
+
+    font-family: "robotothin";
+    src: url('/font/Roboto-Thin.ttf'); 
+}
+
 @import "mixin";
 
 body{
-    font-family: robotoregular, arial, sans-serif;
+    font-family: Robotoregular, arial, sans-serif;
+    margin:0;
 }
 
 .container{
@@ -23,6 +38,7 @@ body{
 @import "elements";
 @import "fonctionnement";
 @import "resto";
+@import "menu";
 @import "footer";
 
 figure{
@@ -36,72 +52,7 @@ figure{
     }
 }
 
-.menu{
-    height: auto;
-    background-color: $color-grey;
-    border-radius: 20px 20px 0px 0px;
-    margin-top: 0;
-    width: 100%;
-    margin-top: -40px;
-    &__top{
-        margin: 0px 20px;
-        display: flex;
-        align-items: center;
-        position: relative;
-        &__title{
-            font-family: shrikhand;
-        }
-        &__heart{
-            position: absolute;
-            right: 20px;
-            font-size: 1.3rem;
-        }   
-    }
-    &__element{
-        margin: 15px;
-        &__title{
-            font-family: robotothin;
-            text-transform: uppercase;
-        }
-        &__line{
-            width: 20%;
-            height: 3px;
-            background-color: $color-third;
-            margin: 5px 0px 0px 0px;
-        }
-        &__box{
-            width: 100%;
-            height: 100%;
-            background-color: white;
-            border-radius: $radius;
-            padding: 15px 0px;
-            margin: 15px 0px;
-            position: relative;
-            @include shadow (10%);
-            &__title{
-                font-size: 1rem;
-                font-weight: bold;
-                margin: 0px 10px;
-            }
-            &__text{
-                font-family: robotothin;
-                margin:5px 10px;
-            }
-            &__price{
-                position: absolute;
-                right:25px;
-                bottom: 19px;
-                font-weight: bold;
-                color: $color-bottom;
-            }
-            
-        }
-    }
-    .btn{
-        margin-bottom: 80px;
-        margin-top: 50px ;
-    }
-}
+
 
 
 

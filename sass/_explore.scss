@@ -1,0 +1,24 @@
+form{
+    >input{  
+        color: $color-bottom;  
+        margin-bottom: 0px;
+        @include search;
+    }
+}
+
+#reservation{
+    background-color: $color-grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    > h1{
+        margin: 43px 20px 20px 20px ;
+        
+    }
+    > p{
+        font-family: robotothin;
+        margin: 0px 20px 34px 20px;
+        color: $color-bottom;
+    }
+}

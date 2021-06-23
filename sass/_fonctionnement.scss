@@ -1,0 +1,77 @@
+#fonctionnement{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    margin-bottom: 68px;
+    >h2{
+        margin: 50px 0 34px 0;
+        @media (min-width: 600px) {
+            text-align: center;
+        } 
+    }
+    
+}
+
+.step{
+    height: 70px;
+    position: relative;
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    &__number{
+        position: absolute;
+        left: 0px;
+        width: 20px;
+        height: 20px;
+        background-color: $color-first;
+        border-radius: 10px;
+        color: white;
+        z-index: 1;
+        font-size: 0.9rem;
+        @include center;
+    }
+    &__box{
+        @include box($color-grey);
+        @include center;
+        @include shadow (10%);
+        @media (min-width: 600px) {
+            width: 98%;
+        } 
+        >i{
+            @include icone(darken($color-grey,50%));
+            
+        }
+        >span{
+            font-size: 0.9rem;
+            font-weight: bold;
+            position: absolute;
+            left: 70px;
+            @media (min-width: 600px) {
+                text-align: center;
+                position: static;
+            } 
+        }
+    }
+    &__box--2{
+        @include box(lighten($color-first,37%));
+        @include center;
+        @include shadow (10%);
+        @media (min-width: 600px) {
+            width: 98%;
+        } 
+        >i{
+            @include icone($color-first);            
+        }
+        >span{
+            font-size: 0.9rem;
+            font-weight: bold;
+            position: absolute;
+            left: 70px;
+            @media (min-width: 600px) {
+                text-align: center;
+                position: static;
+            }
+        }
+    }
+}
