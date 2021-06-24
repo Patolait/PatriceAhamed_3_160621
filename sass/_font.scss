@@ -1,11 +1,14 @@
 @font-face{
-    font-family:'Shrikhand';
-    src: url("../font/Shrikhand-Regular.ttf");
+    font-family: "shrikhandregular";
+    src: url("../font/Shrikhand-Regular.ttf") format("truetype"),
+         url("../font/shrikhandregular.woff") format("woff"),
+         url("../font/shrikhandregular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
 
-    font-family: 'robotoregular';
-    src: url('../font/Roboto-Regular.ttf');
+    font-family: "Robotoregular";
+    src: url("../font/Roboto-Regular.ttf");
 
-    font-family: 'robotothin';
-    src: url('../font/Roboto-Thin.ttf');
-    
+    font-family: "robotothin";
+    src: url("../font/Roboto-Thin.ttf"); 
 }
