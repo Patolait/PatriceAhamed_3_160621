@@ -38,9 +38,10 @@
             border-radius: $radius;
             margin: 15px 0px;
             display: flex;
-            position: relative;
+            position: relative; 
+            overflow: hidden; 
+            cursor: pointer;          
             @include shadow (10%);
-            
             &__group{
                 margin: 15px 10px;
                 display: flex;
@@ -48,12 +49,21 @@
                 justify-content: space-between;
                 flex-wrap: wrap;
                 width: 100%;
-                &:active + .check{
-                    transform: translate(-90px);
-                    i{
-                        transform: rotate(-360deg);
-                    }
-                }
+                &:active{
+                    & + .check{
+                        animation: box-check 550ms both;
+                        i{
+                            animation: box-check-form 550ms both;
+                        }
+                    } 
+                    .menu__element__box__group__price{
+                        animation:box-check-price 500ms 100ms both;
+                    }  
+                    .menu__element__box__group__text{
+                        animation:box-check-text 300ms 100ms both;                        
+                    } 
+                } 
+
                 &__title{
                     font-size: 1rem;
                     font-weight: bold;
@@ -61,10 +71,12 @@
                     width: 100%;
                 }
                 &__text{
-                    width: 70%;
+                    width: 80%;
                     font-family: robotothin;
                     margin:5px 10px;
-                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;                       
                 }
                 &__price{
                     font-weight: bold;
@@ -79,6 +91,7 @@
         margin-top: 50px ;
     }
 }
+
 .check{
     width: 59px;
     height: 68px;
@@ -86,12 +99,10 @@
     border-radius: 0 20px 20px 0;
     position: absolute;
     right: -90px;
-    transition: transform 330ms;
     i{
         height: 100%;
         color: white;
         font-size: 1.3rem;
         @include center;
-        transition: transform 350ms;
     }                
 }

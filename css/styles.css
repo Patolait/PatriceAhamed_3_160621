@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "shrikhandregular";
   src: url("../font/Shrikhand-Regular.ttf") format("truetype"), url("../font/shrikhandregular.woff") format("woff"), url("../font/shrikhandregular.woff2") format("woff2");
@@ -7,6 +8,42 @@
   src: url("../font/Roboto-Regular.ttf");
   font-family: "robotothin";
   src: url("../font/Roboto-Thin.ttf");
+}
+/* Gestion de l'ombre portée */
+/*Champs de recherhe*/
+/*Bouton*/
+/*Pour centrer un element (H/V)*/
+@keyframes box-check {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-90px);
+  }
+}
+@keyframes box-check-form {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes box-check-price {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+@keyframes box-check-text {
+  0% {
+    width: 80%;
+  }
+  100% {
+    width: 65%;
+  }
 }
 body {
   font-family: Robotoregular, arial, sans-serif;
@@ -18,6 +55,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 header {
@@ -96,6 +134,7 @@ form > input {
   justify-content: center;
   align-items: center;
   margin-bottom: 57px;
+  cursor: pointer;
   box-shadow: 0px 3px 5px #aaaaaa;
 }
 .btn > span {
@@ -339,6 +378,8 @@ form > input {
   margin: 15px 0px;
   display: flex;
   position: relative;
+  overflow: hidden;
+  cursor: pointer;
   box-shadow: 0px 3px 5px #dddddd;
 }
 .menu__element__box__group {
@@ -350,10 +391,16 @@ form > input {
   width: 100%;
 }
 .menu__element__box__group:active + .check {
-  transform: translate(-90px);
+  animation: box-check 550ms both;
 }
 .menu__element__box__group:active + .check i {
-  transform: rotate(-360deg);
+  animation: box-check-form 550ms both;
+}
+.menu__element__box__group:active .menu__element__box__group__price {
+  animation: box-check-price 500ms 100ms both;
+}
+.menu__element__box__group:active .menu__element__box__group__text {
+  animation: box-check-text 300ms 100ms both;
 }
 .menu__element__box__group__title {
   font-size: 1rem;
@@ -362,9 +409,11 @@ form > input {
   width: 100%;
 }
 .menu__element__box__group__text {
-  width: 70%;
+  width: 80%;
   font-family: robotothin;
   margin: 5px 10px;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 .menu__element__box__group__price {
@@ -384,7 +433,6 @@ form > input {
   border-radius: 0 20px 20px 0;
   position: absolute;
   right: -90px;
-  transition: transform 330ms;
 }
 .check i {
   height: 100%;
@@ -393,7 +441,6 @@ form > input {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 350ms;
 }
 
 footer {

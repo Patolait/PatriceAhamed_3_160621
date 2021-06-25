@@ -1,7 +1,9 @@
+/* Gestion de l'ombre portée */
 @mixin shadow ($intensity){
     box-shadow: 0px 3px 5px darken($color-grey,$intensity);
 }
 
+/*Champs de recherhe*/
 @mixin search{
     height: 50px;
     display: flex;
@@ -15,6 +17,7 @@
     font-weight: bold;
 }
 
+/*Bouton*/
 @mixin btn{
     width: 215px;
     height: 50px;
@@ -27,14 +30,17 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 57px;
+    cursor: pointer;
     @include shadow (30%);
 }
 
+/*Pour centrer un element (H/V)*/
 @mixin center{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 @mixin box ($bkg_color){
     position: absolute;
@@ -44,6 +50,7 @@
     background-color: $bkg_color;
     border-radius: 20px;
 }
+
 @mixin icone ($icone_color){
     color: $icone_color;
     font-size: 1.1rem;
