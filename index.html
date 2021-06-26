@@ -9,7 +9,14 @@
     <title>ohmyfood</title>
 </head>
 <body>
-    <div class="container">
+    <!--Chargement-->
+    <div class="load">
+        <div class="load__bar load__bar--1"></div>
+        <div class="load__bar load__bar--2"></div>
+        <div class="load__bar load__bar--3"></div>
+    </div>
+    <!--Page-->
+    <div class="container container--delay">
         <header>
             <div class="header__logo">
                 <img src="./images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
@@ -87,28 +94,23 @@
 
             <!--La palette du goût-->
             <article class="resto__type">
-                <a href="menu_1.html">
-                    <div class="resto__new">
-                        Nouveau
-                    </div>
-                    <figure>
-                        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                        <figcaption>
-                            <div class="resto__title">
-                                La palette du goût
-                            </div>
-                            <div class="resto_location">
-                                Ménilemontant
-                            </div>
-                            <div class="resto__heart">
-                                <i class="far fa-heart"></i>                        
-                            </div>
-                        </figcaption>
-                    </figure>
-                        
-                        
-
-                </a>    
+                <div class="resto__new">
+                    Nouveau
+                </div>
+                <figure>
+                    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                    <figcaption>
+                        <div class="resto__title">
+                            <a href="menu_1.html">La palette du goût</a>
+                        </div>
+                        <div class="resto_location">
+                            Ménilemontant
+                        </div>
+                        <div class="resto__heart">
+                            <i class="far fa-heart"></i>                        
+                        </div>
+                    </figcaption>
+                </figure>         
             </article>
 
             <!--Autres resto-->

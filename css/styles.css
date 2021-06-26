@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*nombre de plat de chaque resto*/
 @font-face {
   font-family: "shrikhandregular";
   src: url("../font/Shrikhand-Regular.ttf") format("truetype"), url("../font/shrikhandregular.woff") format("woff"), url("../font/shrikhandregular.woff2") format("woff2");
@@ -13,6 +14,25 @@
 /*Champs de recherhe*/
 /*Bouton*/
 /*Pour centrer un element (H/V)*/
+/*Animation chargement*/
+@keyframes loadcharge {
+  0% {
+    transform: scaleX(0.5);
+  }
+  100% {
+    transform: scaleX(1.5);
+  }
+}
+/*Affichage page */
+@keyframes display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*Animation validation de plat du menu*/
 @keyframes box-check {
   0% {
     transform: translateX(0px);
@@ -45,9 +65,22 @@
     width: 65%;
   }
 }
+/*Fin animation validation de plat du menu*/
+/*Animation d'affichage des plats du menu*/
+@keyframes box-plat {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 body {
   font-family: Robotoregular, arial, sans-serif;
   margin: 0;
+  position: relative;
 }
 
 .container {
@@ -56,6 +89,37 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  z-index: 1;
+  background-color: white;
+}
+.container--delay {
+  animation: display 0ms 2500ms both;
+}
+
+.load {
+  width: 20%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  left: 40%;
+  top: 40%;
+}
+.load__bar {
+  background-color: #99E2D0;
+  height: 12px;
+  width: 100%;
+  animation: loadcharge 700ms both infinite ease-in-out alternate;
+}
+.load__bar--1 {
+  animation-delay: 233.3333333333ms;
+}
+.load__bar--2 {
+  animation-delay: 466.6666666667ms;
+}
+.load__bar--3 {
+  animation-delay: 700ms;
 }
 
 header {
@@ -136,6 +200,10 @@ form > input {
   margin-bottom: 57px;
   cursor: pointer;
   box-shadow: 0px 3px 5px #aaaaaa;
+}
+.btn:hover {
+  opacity: 0.95;
+  box-shadow: 0px 3px 5px #909090;
 }
 .btn > span {
   font-family: robotoregular, sans-serif;
@@ -274,44 +342,44 @@ form > input {
   box-shadow: 0px 3px 5px #dddddd;
   position: relative;
 }
-.resto__type > a {
-  text-decoration: none;
-  color: black;
-}
-.resto__type > a > figure {
+.resto__type > figure {
   height: 100%;
   margin: 0;
 }
-.resto__type > a > figure > img {
+.resto__type > figure > img {
   width: 100%;
   height: 70%;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
 }
-.resto__type > a > figure > figcaption {
+.resto__type > figure > figcaption {
   padding-left: 20px;
   margin-top: 10px;
   position: relative;
 }
-.resto__type > a > figure > figcaption .resto__title {
+.resto__type > figure > figcaption .resto__title {
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 4px;
 }
 @media (min-width: 600px) {
-  .resto__type > a > figure > figcaption .resto__title {
+  .resto__type > figure > figcaption .resto__title {
     text-align: center;
   }
 }
-.resto__type > a > figure > figcaption .resto_location {
+.resto__type > figure > figcaption .resto__title > a {
+  text-decoration: none;
+  color: black;
+}
+.resto__type > figure > figcaption .resto_location {
   font-family: robotothin;
 }
 @media (min-width: 600px) {
-  .resto__type > a > figure > figcaption .resto_location {
+  .resto__type > figure > figcaption .resto_location {
     text-align: center;
   }
 }
-.resto__type > a > figure > figcaption .resto__heart {
+.resto__type > figure > figcaption .resto__heart {
   position: absolute;
   right: 30px;
   top: 0px;
@@ -381,6 +449,34 @@ form > input {
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0px 3px 5px #dddddd;
+  animation: box-plat 1000ms both;
+}
+.menu__element__box--1 {
+  animation-delay: 111.1111111111ms;
+}
+.menu__element__box--2 {
+  animation-delay: 222.2222222222ms;
+}
+.menu__element__box--3 {
+  animation-delay: 333.3333333333ms;
+}
+.menu__element__box--4 {
+  animation-delay: 444.4444444444ms;
+}
+.menu__element__box--5 {
+  animation-delay: 555.5555555556ms;
+}
+.menu__element__box--6 {
+  animation-delay: 666.6666666667ms;
+}
+.menu__element__box--7 {
+  animation-delay: 777.7777777778ms;
+}
+.menu__element__box--8 {
+  animation-delay: 888.8888888889ms;
+}
+.menu__element__box--9 {
+  animation-delay: 1000ms;
 }
 .menu__element__box__group {
   margin: 15px 10px;

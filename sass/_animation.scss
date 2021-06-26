@@ -1,3 +1,27 @@
+/*Animation chargement*/
+@keyframes loadcharge {
+    0%{
+        transform: scaleX(0.5);
+    }
+
+    100%{
+        transform: scaleX(1.5) ;
+    }
+
+}
+
+/*Affichage page */
+@keyframes display {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+/*Animation validation de plat du menu*/
 @keyframes box-check {
     0% {
         transform:translateX(0px);
@@ -37,3 +61,18 @@
         width: 65%;
     }
 }
+/*Fin animation validation de plat du menu*/
+
+/*Animation d'affichage des plats du menu*/
+@keyframes box-plat{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+

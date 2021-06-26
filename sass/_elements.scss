@@ -1,5 +1,9 @@
 .btn{
     @include btn;
+    &:hover{
+        opacity: 0.95;
+        @include shadow (40%);
+    }
     >span{
         font-family: robotoregular,sans-serif;
         font-weight: bold;

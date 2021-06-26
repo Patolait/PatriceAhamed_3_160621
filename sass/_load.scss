@@ -1,0 +1,26 @@
+$bar-load:3;
+$anim-dur-load:700ms;
+$anim-delay-load: $anim-dur-load / $bar-load;
+
+.load{
+    width: 20%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position:fixed;
+    left:40%;
+    top: 40%;
+    &__bar{
+        background-color: $color-third;
+        height: 12px;
+        width: 100%;
+        animation: loadcharge $anim-dur-load both infinite ease-in-out alternate;
+        @for $i from 1 through $bar-load {
+            &--#{$i}{
+                animation-delay: $anim-delay-load * $i;
+            }
+        }
+    }
+    
+}

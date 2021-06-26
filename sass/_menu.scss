@@ -42,6 +42,12 @@
             overflow: hidden; 
             cursor: pointer;          
             @include shadow (10%);
+            animation: box-plat $anim-duration both;
+            @for $i from 1 through $box-plat{
+                &--#{$i} {
+                    animation-delay: $anim-delay * $i;
+                }
+            }
             &__group{
                 margin: 15px 10px;
                 display: flex;
