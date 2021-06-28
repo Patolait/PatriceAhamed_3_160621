@@ -77,6 +77,17 @@
     transform: translateY(0px);
   }
 }
+/*Animation remplissage du coeur*/
+@keyframes heart-clic {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 body {
   font-family: Robotoregular, arial, sans-serif;
   margin: 0;
@@ -199,11 +210,26 @@ form > input {
   align-items: center;
   margin-bottom: 57px;
   cursor: pointer;
+  position: relative;
   box-shadow: 0px 3px 5px #aaaaaa;
 }
 .btn:hover {
-  opacity: 0.95;
   box-shadow: 0px 3px 5px #909090;
+}
+.btn:hover::after {
+  opacity: 1;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(170deg, #ff9de4, #a674e2);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 .btn > span {
   font-family: robotoregular, sans-serif;
@@ -385,6 +411,19 @@ form > input {
   top: 0px;
   font-size: 1.5rem;
 }
+.resto__type > figure > figcaption .resto__heart--2 {
+  position: absolute;
+  right: 29px;
+  top: -1px;
+  font-size: 1.6rem;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+.resto__type > figure > figcaption .resto__heart--2:active {
+  animation: heart-clic 550ms forwards;
+}
 
 .resto__new {
   width: 80px;
@@ -424,6 +463,18 @@ form > input {
   position: absolute;
   right: 20px;
   font-size: 1.3rem;
+}
+.menu__top__heart--2 {
+  position: absolute;
+  right: 19px;
+  font-size: 1.4rem;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+.menu__top__heart--2:active {
+  animation: heart-clic 550ms forwards;
 }
 .menu__element {
   margin: 15px;

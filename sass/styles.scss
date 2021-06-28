@@ -4,26 +4,22 @@ $color-third:#99E2D0;
 $color-grey:#f6f6f6;
 $color-bottom:#353535;
 $radius:20px;
+$anim-duration:1000ms;
+$box-plat:9; /*nombre de plat de chaque resto*/
+$anim-delay: $anim-duration / $box-plat;
+$gradient:170deg, $color-second, $color-first;
+$gradient-heart:90deg, $color-second, $color-first;
 
-@font-face {
-    font-family: 'shrikhandregular';
-    src: url('shrikhand-regular-webfont.woff2') format('woff2'),
-         url('shrikhand-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 
-    font-family: 'Robotoregular';
-    src: url('/font/Roboto-Regular.ttf');
 
-    font-family: "robotothin";
-    src: url('/font/Roboto-Thin.ttf'); 
-}
-
+@import "font";
 @import "mixin";
+@import "animation";
 
 body{
     font-family: Robotoregular, arial, sans-serif;
     margin:0;
+    position: relative;
 }
 
 .container{
@@ -31,8 +27,15 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    z-index: 1;
+    background-color: white;
+    &--delay{
+        animation: display 0ms 2500ms both;
+    }
 }
 
+@import "load";
 @import "header";
 @import "explore";
 @import "elements";

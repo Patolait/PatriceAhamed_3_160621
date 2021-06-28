@@ -32,6 +32,7 @@
     align-items: center;
     margin-bottom: 57px;
     cursor: pointer;
+    position: relative;
     @include shadow (30%);
 }
 
@@ -64,3 +65,8 @@
     color: black;
 }
 
+@mixin gradient-heart{
+    background: -webkit-linear-gradient($color-first, $color-second);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -54,6 +54,18 @@
                 right: 30px;
                 top:0px;
                 font-size: 1.5rem;
+
+                &--2{
+                    position: absolute;
+                    right: 29px;
+                    top: -1px;
+                    font-size: 1.6rem;
+                    @include gradient-heart;
+                    opacity: 0;
+                    &:active{
+                        animation: heart-clic 550ms forwards;
+                    }
+                }
             }
         }
     } 

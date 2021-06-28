@@ -17,7 +17,18 @@
             position: absolute;
             right: 20px;
             font-size: 1.3rem;
+            &--2{
+                position: absolute;
+                right: 19px;
+                font-size: 1.4rem;
+                @include gradient-heart;
+                opacity: 0;
+                &:active{
+                    animation: heart-clic 550ms forwards;
+                }
+            }
         }   
+        
     }
     &__element{
         margin: 15px;
