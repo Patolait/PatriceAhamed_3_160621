@@ -5,10 +5,13 @@
          url("../font/shrikhandregular.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
-
+}
+@font-face{
     font-family: "Robotoregular";
     src: url("../font/Roboto-Regular.ttf");
+}
 
+@font-face{
     font-family: "robotothin";
     src: url("../font/Roboto-Thin.ttf"); 
 }
