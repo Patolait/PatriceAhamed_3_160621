@@ -11,7 +11,7 @@
         align-items: center;
         position: relative;
         &__title{
-            font-family: shrikhand;
+            font-family: shrikhandregular;
         }
         &__heart{
             position: absolute;
@@ -88,8 +88,8 @@
                     width: 100%;
                 }
                 &__text{
-                    width: 80%;
-                    font-family: robotothin;
+                    width: 70%;
+                    font-family: robotolight;
                     margin:5px 10px;
                     white-space: nowrap;
                     overflow: hidden;

@@ -56,9 +56,10 @@
 
 @mixin icone ($icone_color){
     color: $icone_color;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     position: absolute;
     left:30px;
+    bottom: 27px;
 }
 
 @mixin link ($font_color){

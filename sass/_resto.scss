@@ -33,8 +33,9 @@
             margin-top: 10px;
             position: relative;
             .resto__title{
+                font-family: robotobold;
                 font-size: 1.1rem;
-                font-weight: bold;
+                letter-spacing: 0.02rem;
                 margin-bottom: 4px;
                 @media (min-width: 600px) {
                 text-align: center;
@@ -44,7 +45,7 @@
                 }
             }
             .resto_location{
-                font-family: robotothin;
+                font-family: robotolight;
                 @media (min-width: 600px) {
                 text-align: center;
                 }

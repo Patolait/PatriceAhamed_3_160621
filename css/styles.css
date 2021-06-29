@@ -11,8 +11,16 @@
   src: url("../font/Roboto-Regular.ttf");
 }
 @font-face {
-  font-family: "robotothin";
-  src: url("../font/Roboto-Thin.ttf");
+  font-family: "robotolight";
+  src: url("../font/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "robotomedium";
+  src: url("../font/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "robotobold";
+  src: url("../font/Roboto-Bold.ttf");
 }
 /* Gestion de l'ombre portée */
 /*Champs de recherhe*/
@@ -93,7 +101,7 @@
   }
 }
 body {
-  font-family: Robotoregular, arial, sans-serif;
+  font-family: Robotomedium, arial, sans-serif;
   margin: 0;
   position: relative;
 }
@@ -173,6 +181,7 @@ header {
 form > input {
   color: #353535;
   margin-bottom: 0px;
+  font-family: "Font Awesome 5 Free", "Robotoregular";
   height: 50px;
   display: flex;
   justify-content: center;
@@ -183,6 +192,8 @@ form > input {
   box-shadow: 0px 3px 4px #c3c3c3 inset;
   font-size: 1rem;
   font-weight: bold;
+  content: "";
+  font-size: 1.1rem;
 }
 
 #reservation {
@@ -196,7 +207,7 @@ form > input {
   margin: 43px 20px 20px 20px;
 }
 #reservation > p {
-  font-family: robotothin;
+  font-family: robotolight;
   margin: 0px 20px 34px 20px;
   color: #353535;
 }
@@ -238,8 +249,7 @@ form > input {
   transition: opacity 250ms;
 }
 .btn > span {
-  font-family: robotoregular, sans-serif;
-  font-weight: bold;
+  font-family: robotomedium, sans-serif;
   font-size: 0.9rem;
 }
 
@@ -299,13 +309,13 @@ form > input {
 }
 .step__box > i {
   color: #777777;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   position: absolute;
   left: 30px;
+  bottom: 27px;
 }
 .step__box > span {
-  font-size: 0.9rem;
-  font-weight: bold;
+  font-size: 1rem;
   position: absolute;
   left: 70px;
 }
@@ -334,13 +344,13 @@ form > input {
 }
 .step__box--2 > i {
   color: #9356DC;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   position: absolute;
   left: 30px;
+  bottom: 27px;
 }
 .step__box--2 > span {
   font-size: 0.9rem;
-  font-weight: bold;
   position: absolute;
   left: 70px;
 }
@@ -390,8 +400,9 @@ form > input {
   position: relative;
 }
 .resto__type > figure > figcaption .resto__title {
+  font-family: robotobold;
   font-size: 1.1rem;
-  font-weight: bold;
+  letter-spacing: 0.02rem;
   margin-bottom: 4px;
 }
 @media (min-width: 600px) {
@@ -404,7 +415,7 @@ form > input {
   color: black;
 }
 .resto__type > figure > figcaption .resto_location {
-  font-family: robotothin;
+  font-family: robotolight;
 }
 @media (min-width: 600px) {
   .resto__type > figure > figcaption .resto_location {
@@ -463,7 +474,7 @@ form > input {
   position: relative;
 }
 .menu__top__title {
-  font-family: shrikhand;
+  font-family: shrikhandregular;
 }
 .menu__top__heart {
   position: absolute;
@@ -562,8 +573,8 @@ form > input {
   width: 100%;
 }
 .menu__element__box__group__text {
-  width: 80%;
-  font-family: robotothin;
+  width: 70%;
+  font-family: robotolight;
   margin: 5px 10px;
   white-space: nowrap;
   overflow: hidden;
@@ -609,8 +620,9 @@ footer {
 }
 footer > h3 {
   font-family: shrikhandregular, Arial, Helvetica, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin: 0;
+  letter-spacing: 0.05rem;
 }
 footer > ul {
   padding: 0;

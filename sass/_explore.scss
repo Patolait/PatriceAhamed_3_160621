@@ -2,7 +2,11 @@ form{
     >input{  
         color: $color-bottom;  
         margin-bottom: 0px;
+        font-family:  "Font Awesome 5 Free", "Robotoregular";
         @include search;
+        content: "\f3c5";
+        font-size: 1.1rem;
+
     }
 }
 
@@ -17,7 +21,7 @@ form{
         
     }
     > p{
-        font-family: robotothin;
+        font-family: robotolight;
         margin: 0px 20px 34px 20px;
         color: $color-bottom;
     }
