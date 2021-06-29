@@ -78,7 +78,7 @@
     color: darken($color-third, 40%);
     font-size: 0.8rem;
     font-weight: bold;
-    border-radius:$radius*0.2;
+    border-radius:$radius*0.1;
     display: flex;
     @include center;
     position: absolute;
