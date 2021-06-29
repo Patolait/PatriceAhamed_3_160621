@@ -33,6 +33,7 @@
     margin-bottom: 57px;
     cursor: pointer;
     position: relative;
+    overflow: hidden;
     @include shadow (30%);
 }
 

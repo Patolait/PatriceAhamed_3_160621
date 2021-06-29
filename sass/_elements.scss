@@ -3,7 +3,8 @@
     &:hover{
         @include shadow (40%);
         &::after{
-            opacity: 1;
+            opacity: 0.2;
+            z-index: 1;
         }
     }
     &::after{
