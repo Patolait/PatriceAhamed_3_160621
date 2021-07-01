@@ -1,10 +1,10 @@
 #resto{
     background-color: $color-grey;
-    padding: 0 20px 60px 20px;
+    padding: 0 20px 40px 20px;
     display: flex;
     flex-direction: column;
     >h2{
-        margin: 60px 0 28px 0;
+        margin: 50px 0 25px 0;
         @media (min-width: 600px) {
             text-align: center;
         } 
@@ -18,7 +18,8 @@
     background-color: white;
     border-radius: $radius;
     @include shadow(10%);
-    position: relative;        
+    position: relative; 
+    margin-bottom: 20px;       
     >figure{
         height: 100%;
         margin: 0;
@@ -55,18 +56,28 @@
                 right: 30px;
                 top:0px;
                 font-size: 1.5rem;
+                color: white;
+                -webkit-text-stroke:1px black;
+                overflow: hidden;
+                cursor: pointer;
 
+                &:active{
+                    animation: heart-base 550ms 260ms both;
+                    > .resto__heart--2{
+                        animation: heart-clic 550ms forwards;
+                    } 
+                }
+                
                 &--2{
                     position: absolute;
-                    right: 29px;
-                    top: -1px;
-                    font-size: 1.6rem;
+                    right: 0;
+                    top: 0;
+                    font-size: 1.5rem;
                     @include gradient-heart;
                     opacity: 0;
-                    &:active{
-                        animation: heart-clic 550ms forwards;
-                    }
-                }
+                    -webkit-text-stroke:0;
+                    z-index: 1;
+                }  
             }
         }
     } 
@@ -74,15 +85,17 @@
 
 .resto__new{
     width: 80px;
-    height: 30PX;
+    height: 30px;
     background-color: $color-third;
     color: darken($color-third, 40%);
     font-size: 0.8rem;
-    font-weight: bold;
     border-radius:$radius*0.1;
     display: flex;
     @include center;
     position: absolute;
     top:13px;
     right:13px;
+    >span{
+        letter-spacing: 0.03rem;
+    }
 }

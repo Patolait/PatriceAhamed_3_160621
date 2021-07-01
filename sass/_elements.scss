@@ -1,26 +1,14 @@
 .btn{
-    @include btn;
-    &:hover{
-        @include shadow (40%);
-        &::after{
-            opacity: 0.2;
-            z-index: 1;
-        }
-    }
-    &::after{
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(170deg, lighten($color-second,7), lighten($color-first,7));
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 250ms;
-    }
+    @include btn ($gradient);
     >span{
         font-family: robotomedium,sans-serif;
         font-size: 0.9rem;
     }
+    &:hover{
+        @include shadow (40%);
+        background: linear-gradient($gradient-light);
+
+    }
+    
+
 }

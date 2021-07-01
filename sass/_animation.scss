@@ -88,3 +88,17 @@
         opacity: 1;
     }
 }
+
+@keyframes heart-base {
+    0%{
+        -webkit-text-stroke:1;
+    }
+
+    30%{
+        -webkit-text-stroke:1;
+    }
+
+    100%{
+        -webkit-text-stroke:0;
+    }
+}

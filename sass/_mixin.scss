@@ -1,6 +1,13 @@
 /* Gestion de l'ombre portée */
 @mixin shadow ($intensity){
-    box-shadow: 0px 3px 5px darken($color-grey,$intensity);
+    box-shadow: 0px 3px 10px darken($color-grey,$intensity);
+}
+
+/*Pour centrer un element (H/V)*/
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Champs de recherhe*/
@@ -19,17 +26,15 @@
 
 
 /*Bouton*/
-@mixin btn{
+@mixin btn ($gradient-type){
     width: 215px;
     height: 50px;
     border: 0;
     border-radius: 40px;
-    background: linear-gradient($gradient);
+    background: linear-gradient($gradient-type);
     margin: auto;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
     margin-bottom: 57px;
     cursor: pointer;
     position: relative;
@@ -37,13 +42,20 @@
     @include shadow (30%);
 }
 
-/*Pour centrer un element (H/V)*/
-@mixin center{
+@mixin btn-light ($gradient-type){
+    width: 215px;
+    height: 50px;
+    border: 0;
+    border-radius: 40px;
+    background: linear-gradient($gradient-type);
+    margin: auto;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 57px;
+    cursor: pointer;
 }
-
 
 @mixin box ($bkg_color){
     position: absolute;
@@ -54,12 +66,12 @@
     border-radius: 20px;
 }
 
-@mixin icone ($icone_color){
+@mixin icone ($icone_color,$size){
     color: $icone_color;
-    font-size: 1.2rem;
+    font-size: $size;
     position: absolute;
-    left:30px;
-    bottom: 27px;
+    left:35px;
+    top: 28px;
 }
 
 @mixin link ($font_color){

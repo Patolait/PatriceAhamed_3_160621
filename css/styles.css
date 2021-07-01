@@ -23,9 +23,9 @@
   src: url("../font/Roboto-Bold.ttf");
 }
 /* Gestion de l'ombre portée */
+/*Pour centrer un element (H/V)*/
 /*Champs de recherhe*/
 /*Bouton*/
-/*Pour centrer un element (H/V)*/
 /*Animation chargement*/
 @keyframes loadcharge {
   0% {
@@ -98,6 +98,17 @@
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+@keyframes heart-base {
+  0% {
+    -webkit-text-stroke: 1;
+  }
+  30% {
+    -webkit-text-stroke: 1;
+  }
+  100% {
+    -webkit-text-stroke: 0;
   }
 }
 body {
@@ -227,30 +238,15 @@ form > input {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  box-shadow: 0px 3px 5px #aaaaaa;
-}
-.btn:hover {
-  box-shadow: 0px 3px 5px #909090;
-}
-.btn:hover::after {
-  opacity: 0.2;
-  z-index: 1;
-}
-.btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(170deg, #ff9de4, #a674e2);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 250ms;
+  box-shadow: 0px 3px 10px #aaaaaa;
 }
 .btn > span {
   font-family: robotomedium, sans-serif;
   font-size: 0.9rem;
+}
+.btn:hover {
+  box-shadow: 0px 3px 10px #909090;
+  background: linear-gradient(170deg, #ff88de, #9b63df);
 }
 
 #fonctionnement {
@@ -261,7 +257,7 @@ form > input {
   margin-bottom: 68px;
 }
 #fonctionnement > h2 {
-  margin: 50px 0 25px 0;
+  margin: 45px 0 20px 0;
 }
 @media (min-width: 600px) {
   #fonctionnement > h2 {
@@ -279,10 +275,11 @@ form > input {
 .step__number {
   position: absolute;
   left: 0px;
-  width: 20px;
-  height: 20px;
+  top: 25px;
+  width: 25px;
+  height: 25px;
   background-color: #9356DC;
-  border-radius: 10px;
+  border-radius: 20px;
   color: white;
   z-index: 1;
   font-size: 0.9rem;
@@ -300,7 +297,7 @@ form > input {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 3px 5px #dddddd;
+  box-shadow: 0px 3px 10px #dddddd;
 }
 @media (min-width: 600px) {
   .step__box {
@@ -309,15 +306,16 @@ form > input {
 }
 .step__box > i {
   color: #777777;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   position: absolute;
-  left: 30px;
-  bottom: 27px;
+  left: 35px;
+  top: 28px;
 }
 .step__box > span {
   font-size: 1rem;
   position: absolute;
-  left: 70px;
+  left: 75px;
+  top: 30px;
 }
 @media (min-width: 600px) {
   .step__box > span {
@@ -335,7 +333,7 @@ form > input {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 3px 5px #dddddd;
+  box-shadow: 0px 3px 10px #dddddd;
 }
 @media (min-width: 600px) {
   .step__box--2 {
@@ -346,13 +344,14 @@ form > input {
   color: #9356DC;
   font-size: 1.2rem;
   position: absolute;
-  left: 30px;
-  bottom: 27px;
+  left: 35px;
+  top: 28px;
 }
 .step__box--2 > span {
-  font-size: 0.9rem;
+  font-size: 1rem;
   position: absolute;
-  left: 70px;
+  left: 75px;
+  top: 30px;
 }
 @media (min-width: 600px) {
   .step__box--2 > span {
@@ -363,12 +362,12 @@ form > input {
 
 #resto {
   background-color: #f6f6f6;
-  padding: 0 20px 60px 20px;
+  padding: 0 20px 40px 20px;
   display: flex;
   flex-direction: column;
 }
 #resto > h2 {
-  margin: 60px 0 28px 0;
+  margin: 50px 0 25px 0;
 }
 @media (min-width: 600px) {
   #resto > h2 {
@@ -381,8 +380,9 @@ form > input {
   height: 250px;
   background-color: white;
   border-radius: 20px;
-  box-shadow: 0px 3px 5px #dddddd;
+  box-shadow: 0px 3px 10px #dddddd;
   position: relative;
+  margin-bottom: 20px;
 }
 .resto__type > figure {
   height: 100%;
@@ -427,28 +427,36 @@ form > input {
   right: 30px;
   top: 0px;
   font-size: 1.5rem;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  overflow: hidden;
+  cursor: pointer;
+}
+.resto__type > figure > figcaption .resto__heart:active {
+  animation: heart-base 550ms 260ms both;
+}
+.resto__type > figure > figcaption .resto__heart:active > .resto__heart--2 {
+  animation: heart-clic 550ms forwards;
 }
 .resto__type > figure > figcaption .resto__heart--2 {
   position: absolute;
-  right: 29px;
-  top: -1px;
-  font-size: 1.6rem;
+  right: 0;
+  top: 0;
+  font-size: 1.5rem;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-}
-.resto__type > figure > figcaption .resto__heart--2:active {
-  animation: heart-clic 550ms forwards;
+  -webkit-text-stroke: 0;
+  z-index: 1;
 }
 
 .resto__new {
   width: 80px;
-  height: 30PX;
+  height: 30px;
   background-color: #99E2D0;
   color: #278870;
   font-size: 0.8rem;
-  font-weight: bold;
   border-radius: 2px;
   display: flex;
   display: flex;
@@ -458,11 +466,25 @@ form > input {
   top: 13px;
   right: 13px;
 }
+.resto__new > span {
+  letter-spacing: 0.03rem;
+}
+
+figure {
+  height: 280px;
+  width: 100%;
+  margin: 0;
+}
+figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .menu {
   height: auto;
   background-color: #f6f6f6;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 40px 40px 0px 0px;
   margin-top: 0;
   width: 100%;
   margin-top: -40px;
@@ -475,29 +497,45 @@ form > input {
 }
 .menu__top__title {
   font-family: shrikhandregular;
+  letter-spacing: 0.03rem;
+  color: #101010;
+  font-size: 1.05rem;
 }
 .menu__top__heart {
   position: absolute;
-  right: 20px;
-  font-size: 1.3rem;
+  right: 18px;
+  top: 25px;
+  font-size: 1.5rem;
+  color: #f6f6f6;
+  -webkit-text-stroke: 1px black;
+  overflow: hidden;
+  cursor: pointer;
+  /*Animation coeur*/
+  /*Fin animation coeur*/
+}
+.menu__top__heart:active {
+  animation: heart-base 550ms 260ms both;
+}
+.menu__top__heart:active > .menu__top__heart--2 {
+  animation: heart-clic 550ms forwards;
 }
 .menu__top__heart--2 {
   position: absolute;
-  right: 19px;
-  font-size: 1.4rem;
+  right: 0;
+  top: 0;
+  font-size: 1.5rem;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-}
-.menu__top__heart--2:active {
-  animation: heart-clic 550ms forwards;
+  -webkit-text-stroke: 0;
+  z-index: 1;
 }
 .menu__element {
   margin: 15px;
 }
 .menu__element__title {
-  font-family: robotothin;
+  font-family: robotolight;
   text-transform: uppercase;
 }
 .menu__element__line {
@@ -516,7 +554,7 @@ form > input {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0px 3px 5px #dddddd;
+  box-shadow: 0px 3px 10px #dddddd;
   animation: box-plat 1000ms both;
 }
 .menu__element__box--1 {
@@ -555,38 +593,45 @@ form > input {
   width: 100%;
 }
 .menu__element__box__group:active + .check {
-  animation: box-check 550ms both;
+  animation: box-check 500ms both;
 }
 .menu__element__box__group:active + .check i {
   animation: box-check-form 550ms both;
 }
-.menu__element__box__group:active .menu__element__box__group__price {
+.menu__element__box__group:active .menu__element__box__group__anim__price {
   animation: box-check-price 500ms 100ms both;
 }
-.menu__element__box__group:active .menu__element__box__group__text {
+.menu__element__box__group:active .menu__element__box__group__anim__text {
   animation: box-check-text 300ms 100ms both;
 }
 .menu__element__box__group__title {
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.1rem;
   margin: 0px 10px;
   width: 100%;
 }
-.menu__element__box__group__text {
-  width: 70%;
+.menu__element__box__group__anim {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.menu__element__box__group__anim__text {
+  width: 80%;
   font-family: robotolight;
+  font-size: 0.9rem;
   margin: 5px 10px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__element__box__group__price {
+.menu__element__box__group__anim__price {
   font-weight: bold;
   color: #353535;
   margin-right: 15px;
 }
 .menu .btn {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   margin-top: 50px;
 }
 
@@ -608,15 +653,20 @@ form > input {
 }
 
 footer {
+  width: 100%;
   height: 165px;
   background-color: #353535;
-  padding: 20px;
+  padding: 26px 20px 10px 20px;
   color: white;
 }
 @media (min-width: 600px) {
   footer {
     text-align: center;
   }
+}
+footer .footer__logo > img {
+  width: 101px;
+  height: 17px;
 }
 footer > h3 {
   font-family: shrikhandregular, Arial, Helvetica, sans-serif;
@@ -627,7 +677,7 @@ footer > h3 {
 footer > ul {
   padding: 0;
   font-size: 0.9rem;
-  margin-top: 20px;
+  margin-top: 16px;
 }
 footer > ul > li {
   list-style-type: none;
@@ -642,17 +692,6 @@ footer > ul > li > i {
 footer > ul > li > a {
   text-decoration: none;
   color: white;
-}
-
-figure {
-  height: 280px;
-  width: 100%;
-  margin: 0;
-}
-figure > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 /*# sourceMappingURL=styles.css.map */
