@@ -61,6 +61,14 @@
     transform: rotate(-360deg);
   }
 }
+@keyframes box-title {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 61%;
+  }
+}
 @keyframes box-check-price {
   0% {
     transform: translateX(0px);
@@ -74,7 +82,7 @@
     width: 80%;
   }
   100% {
-    width: 65%;
+    width: 61%;
   }
 }
 /*Fin animation validation de plat du menu*/
@@ -290,7 +298,7 @@ form > input {
 .step__box {
   position: absolute;
   left: 10px;
-  width: 90%;
+  width: 91%;
   height: 70px;
   background-color: #f6f6f6;
   border-radius: 20px;
@@ -326,7 +334,7 @@ form > input {
 .step__box--2 {
   position: absolute;
   left: 10px;
-  width: 90%;
+  width: 91%;
   height: 70px;
   background-color: #f7f2fc;
   border-radius: 20px;
@@ -388,7 +396,7 @@ form > input {
   height: 100%;
   margin: 0;
 }
-.resto__type > figure > img {
+.resto__type > figure > a img {
   width: 100%;
   height: 70%;
   object-fit: cover;
@@ -532,9 +540,10 @@ figure > img {
   z-index: 1;
 }
 .menu__element {
-  margin: 15px;
+  margin: 15px 15px 35px 15px;
 }
 .menu__element__title {
+  margin-left: 5px;
   font-family: robotolight;
   text-transform: uppercase;
 }
@@ -542,7 +551,7 @@ figure > img {
   width: 40px;
   height: 3px;
   background-color: #99E2D0;
-  margin: 5px 0px 0px 0px;
+  margin: 5px 0px 0px 5px;
 }
 .menu__element__box {
   width: 100%;
@@ -584,8 +593,11 @@ figure > img {
 .menu__element__box--9 {
   animation-delay: 1000ms;
 }
+.menu__element__box--size {
+  height: 92px;
+}
 .menu__element__box__group {
-  margin: 15px 10px;
+  margin: 13px 10px 20px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -598,16 +610,34 @@ figure > img {
 .menu__element__box__group:active + .check i {
   animation: box-check-form 550ms both;
 }
+.menu__element__box__group:active + .check--2 {
+  animation: box-check 500ms both;
+}
+.menu__element__box__group:active + .check--2 i {
+  animation: box-check-form 550ms both;
+}
 .menu__element__box__group:active .menu__element__box__group__anim__price {
   animation: box-check-price 500ms 100ms both;
 }
 .menu__element__box__group:active .menu__element__box__group__anim__text {
   animation: box-check-text 300ms 100ms both;
 }
+.menu__element__box__group:active .menu__element__box__group__title {
+  animation: box-title 300ms 100ms both;
+}
 .menu__element__box__group__title {
   font-size: 1.1rem;
   margin: 0px 10px;
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__element__box__group__title--2 {
+  font-size: 1.1rem;
+  margin: 0px 10px;
+  width: 70%;
+  white-space: normal;
 }
 .menu__element__box__group__anim {
   display: flex;
@@ -619,14 +649,14 @@ figure > img {
 .menu__element__box__group__anim__text {
   width: 80%;
   font-family: robotolight;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin: 5px 10px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .menu__element__box__group__anim__price {
-  font-weight: bold;
+  font-size: 0.95rem;
   color: #353535;
   margin-right: 15px;
 }
@@ -642,6 +672,9 @@ figure > img {
   border-radius: 0 20px 20px 0;
   position: absolute;
   right: -90px;
+}
+.check--2 {
+  height: 92px;
 }
 .check i {
   height: 100%;

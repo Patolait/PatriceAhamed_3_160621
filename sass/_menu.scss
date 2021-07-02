@@ -59,8 +59,9 @@ figure{
         
     }
     &__element{
-        margin: 15px;
+        margin: 15px 15px 35px 15px;
         &__title{
+            margin-left: 5px;
             font-family: robotolight;
             text-transform: uppercase;
         }
@@ -68,7 +69,7 @@ figure{
             width: 40px;
             height: 3px;
             background-color: $color-third;
-            margin: 5px 0px 0px 0px;
+            margin: 5px 0px 0px 5px;
         }
         &__box{
             width: 100%;
@@ -87,8 +88,11 @@ figure{
                     animation-delay: $anim-delay * $i;
                 }
             }
+            &--size{
+                height: 92px;
+            }
             &__group{
-                margin: 15px 10px;
+                margin: 13px 10px 20px 10px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -101,11 +105,20 @@ figure{
                             animation: box-check-form 550ms both;
                         }
                     } 
+                    & + .check--2{
+                        animation: box-check 500ms both;
+                        i{
+                            animation: box-check-form 550ms both;
+                        }
+                    } 
                     .menu__element__box__group__anim__price{
                         animation:box-check-price 500ms 100ms both;
                     }  
                     .menu__element__box__group__anim__text{
                         animation:box-check-text 300ms 100ms both;                        
+                    } 
+                    .menu__element__box__group__title{
+                        animation:box-title 300ms 100ms both;                        
                     } 
                 } 
 
@@ -113,6 +126,15 @@ figure{
                     font-size: 1.1rem;
                     margin: 0px 10px;
                     width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    &--2{
+                        font-size: 1.1rem;
+                        margin: 0px 10px;
+                        width: 70%;
+                        white-space: normal;
+                    }
                 }
 
                 &__anim{
@@ -124,14 +146,14 @@ figure{
                     &__text{
                         width: 80%;
                         font-family: robotolight;
-                        font-size: 0.9rem;
+                        font-size: 0.85rem;
                         margin:5px 10px;
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;                       
                     }
                     &__price{
-                        font-weight: bold;
+                        font-size:0.95rem;
                         color: $color-bottom;
                         margin-right: 15px;
                     }
@@ -156,6 +178,9 @@ figure{
     border-radius: 0 20px 20px 0;
     position: absolute;
     right: -90px;
+    &--2{
+        height: 92px;
+    }
     i{
         height: 100%;
         color: white;
