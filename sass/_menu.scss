@@ -98,6 +98,7 @@ figure{
                 justify-content: space-between;
                 flex-wrap: wrap;
                 width: 100%;
+                position: relative;
                 &:active{
                     & + .check{
                         animation: box-check 500ms both;
@@ -129,11 +130,17 @@ figure{
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    @media(min-width:$media-tab){
+                        font-size: 1.2rem;
+                    }
                     &--2{
                         font-size: 1.1rem;
                         margin: 0px 10px;
                         width: 70%;
                         white-space: normal;
+                        @media(min-width:$media-tab){
+                            font-size: 1.2rem;
+                        }
                     }
                 }
 
@@ -156,6 +163,12 @@ figure{
                         font-size:0.95rem;
                         color: $color-bottom;
                         margin-right: 15px;
+                        @media(min-width:$media-tab){
+                            font-size: 1.2rem;
+                            position: absolute;
+                            top:15px;
+                            right: 10px;
+                        }
                     }
                     
                 }

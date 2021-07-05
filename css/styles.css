@@ -262,23 +262,57 @@ form > input {
   flex-direction: column;
   justify-content: center;
   padding-left: 20px;
-  margin-bottom: 68px;
+  margin-bottom: 50px;
+}
+@media (min-width: 500px) {
+  #fonctionnement {
+    padding-left: 0;
+    width: 100%;
+  }
 }
 #fonctionnement > h2 {
   margin: 45px 0 20px 0;
 }
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   #fonctionnement > h2 {
     text-align: center;
+  }
+}
+
+@media (min-width: 900px) {
+  .group__step {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media (min-width 500px) {
+  .group__step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
 .step {
   height: 70px;
   position: relative;
-  margin: 10px 0px;
+  margin: 10px 0 25px 0;
   display: flex;
   align-items: center;
+}
+@media (min-width: 900px) {
+  .step {
+    width: 30%;
+  }
+}
+@media (min-width: 500px) {
+  .step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 30px;
+  }
 }
 .step__number {
   position: absolute;
@@ -295,6 +329,17 @@ form > input {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 500px) {
+  .step__number {
+    left: 50%;
+    top: -10px;
+  }
+}
+@media (min-width: 900px) {
+  .step__number {
+    left: 47%;
+  }
+}
 .step__box {
   position: absolute;
   left: 10px;
@@ -307,9 +352,15 @@ form > input {
   align-items: center;
   box-shadow: 0px 3px 10px #dddddd;
 }
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .step__box {
     width: 98%;
+  }
+}
+@media (min-width: 500px) {
+  .step__box {
+    position: static;
+    width: 100%;
   }
 }
 .step__box > i {
@@ -319,13 +370,25 @@ form > input {
   left: 35px;
   top: 28px;
 }
+@media (min-width: 500px) {
+  .step__box > i {
+    position: static;
+    margin-right: 20px;
+  }
+}
 .step__box > span {
   font-size: 1rem;
   position: absolute;
   left: 75px;
   top: 30px;
 }
-@media (min-width: 600px) {
+@media (min-width: 900px) {
+  .step__box > span {
+    text-align: center;
+    position: static;
+  }
+}
+@media (min-width: 500px) {
   .step__box > span {
     text-align: center;
     position: static;
@@ -343,9 +406,16 @@ form > input {
   align-items: center;
   box-shadow: 0px 3px 10px #dddddd;
 }
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .step__box--2 {
     width: 98%;
+  }
+}
+@media (min-width: 500px) {
+  .step__box--2 {
+    position: static;
+    width: 100%;
+    margin: 0 20px;
   }
 }
 .step__box--2 > i {
@@ -355,13 +425,25 @@ form > input {
   left: 35px;
   top: 28px;
 }
+@media (min-width: 500px) {
+  .step__box--2 > i {
+    position: static;
+    margin-right: 20px;
+  }
+}
 .step__box--2 > span {
   font-size: 1rem;
   position: absolute;
   left: 75px;
   top: 30px;
 }
-@media (min-width: 600px) {
+@media (min-width: 900px) {
+  .step__box--2 > span {
+    text-align: center;
+    position: static;
+  }
+}
+@media (min-width: 500px) {
   .step__box--2 > span {
     text-align: center;
     position: static;
@@ -383,6 +465,15 @@ form > input {
   }
 }
 
+@media (min-width: 900px) {
+  .group__resto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
 .resto__type {
   width: 100%;
   height: 250px;
@@ -391,6 +482,12 @@ form > input {
   box-shadow: 0px 3px 10px #dddddd;
   position: relative;
   margin-bottom: 20px;
+}
+@media (min-width: 900px) {
+  .resto__type {
+    width: 45%;
+    margin-bottom: 30px;
+  }
 }
 .resto__type > figure {
   height: 100%;
@@ -603,6 +700,7 @@ figure > img {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
+  position: relative;
 }
 .menu__element__box__group:active + .check {
   animation: box-check 500ms both;
@@ -633,11 +731,21 @@ figure > img {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media (min-width: 500px) {
+  .menu__element__box__group__title {
+    font-size: 1.2rem;
+  }
+}
 .menu__element__box__group__title--2 {
   font-size: 1.1rem;
   margin: 0px 10px;
   width: 70%;
   white-space: normal;
+}
+@media (min-width: 500px) {
+  .menu__element__box__group__title--2 {
+    font-size: 1.2rem;
+  }
 }
 .menu__element__box__group__anim {
   display: flex;
@@ -659,6 +767,14 @@ figure > img {
   font-size: 0.95rem;
   color: #353535;
   margin-right: 15px;
+}
+@media (min-width: 500px) {
+  .menu__element__box__group__anim__price {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+  }
 }
 .menu .btn {
   margin-bottom: 60px;
@@ -692,9 +808,10 @@ footer {
   padding: 26px 20px 10px 20px;
   color: white;
 }
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   footer {
     text-align: center;
+    padding: 26px 0;
   }
 }
 footer .footer__logo > img {

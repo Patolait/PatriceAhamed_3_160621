@@ -4,8 +4,9 @@ footer{
     background-color: $color-bottom;
     padding: 26px 20px 10px 20px;
     color: white;
-    @media (min-width: 600px) {
+    @media (min-width: $media-tab) {
         text-align: center;
+        padding: 26px 0;
     }
     
     .footer__logo{
