@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $color-first:#9356DC;
 $color-second:#FF79DA;
 $color-third:#99E2D0;
@@ -6,10 +8,12 @@ $color-bottom:#353535;
 $radius:20px;
 $anim-duration:1000ms;
 $box-plat:9; /*nombre de plat de chaque resto*/
-$anim-delay: $anim-duration / $box-plat;
+$anim-delay: math.div($anim-duration, $box-plat);
 $gradient:170deg, $color-second, $color-first;
 $gradient-light:(170deg, lighten($color-second,3), lighten($color-first,3));
 $gradient-heart:90deg, $color-second, $color-first;
+$media-tab:500px;
+$media-desk: 900px;
 
 
 
