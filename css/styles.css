@@ -506,7 +506,6 @@ form > input {
 }
 .resto__type > figure > figcaption .resto__title {
   font-family: robotobold;
-  font-size: 1.1rem;
   letter-spacing: 0.02rem;
   margin-bottom: 4px;
 }
@@ -518,6 +517,11 @@ form > input {
 .resto__type > figure > figcaption .resto__title > a {
   text-decoration: none;
   color: black;
+}
+.resto__type > figure > figcaption .resto__title > a > h3 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 1.1rem;
 }
 .resto__type > figure > figcaption .resto_location {
   font-family: robotolight;

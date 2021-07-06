@@ -51,7 +51,6 @@
             position: relative;
             .resto__title{
                 font-family: robotobold;
-                font-size: 1.1rem;
                 letter-spacing: 0.02rem;
                 margin-bottom: 4px;
                 @media (min-width: 600px) {
@@ -59,6 +58,11 @@
                 }
                 >a{
                     @include link (black);
+                    >h3{
+                        margin: 0;
+                        font-weight: normal;
+                        font-size: 1.1rem;
+                    }
                 }
             }
             .resto_location{
