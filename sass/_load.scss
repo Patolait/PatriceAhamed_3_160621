@@ -1,6 +1,6 @@
 $bar-load:3;
 $anim-dur-load:700ms;
-$anim-delay-load: $anim-dur-load / $bar-load;
+$anim-delay-load: math.div($anim-dur-load, $bar-load);
 
 .load{
     width: 20%;

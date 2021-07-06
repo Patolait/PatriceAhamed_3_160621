@@ -76,6 +76,8 @@
                 -webkit-text-stroke:1px black;
                 overflow: hidden;
                 cursor: pointer;
+                width: 25px;
+                text-align: center;
 
                 &:active{
                     animation: heart-base 550ms 260ms both;
@@ -93,6 +95,7 @@
                     opacity: 0;
                     -webkit-text-stroke:0;
                     z-index: 1;
+                    width: 25px;
                 }  
             }
         }
