@@ -129,12 +129,15 @@ figure{
                 } 
 
                 &__title{
-                    font-size: 1.1rem;
                     margin: 0px 10px;
                     width: 100%;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
+
+                    >h3{
+                        @include h3-style(1.1rem);
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
                     @media(min-width:$media-tab){
                         font-size: 1.2rem;
                     }

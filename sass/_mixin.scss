@@ -84,3 +84,9 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+@mixin h3-style ($size){
+    margin: 0;
+    font-weight: normal;
+    font-size: $size;
+}

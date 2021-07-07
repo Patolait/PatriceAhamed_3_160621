@@ -735,9 +735,13 @@ figure > img {
   animation: box-title 300ms 100ms both;
 }
 .menu__element__box__group__title {
-  font-size: 1.1rem;
   margin: 0px 10px;
   width: 100%;
+}
+.menu__element__box__group__title > h3 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 1.1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

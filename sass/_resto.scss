@@ -59,9 +59,7 @@
                 >a{
                     @include link (black);
                     >h3{
-                        margin: 0;
-                        font-weight: normal;
-                        font-size: 1.1rem;
+                        @include h3-style (1.1rem);
                     }
                 }
             }
