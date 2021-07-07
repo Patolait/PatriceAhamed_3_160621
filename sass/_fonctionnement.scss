@@ -23,7 +23,7 @@
         flex-direction: row;
         justify-content: space-around;
     }
-    @media (min-width$media-tab){
+    @media (min-width: $media-tab){
         display: flex;
         flex-direction: column;
         justify-content: center;

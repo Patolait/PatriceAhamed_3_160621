@@ -318,7 +318,7 @@ form .location {
     justify-content: space-around;
   }
 }
-@media (min-width 500px) {
+@media (min-width: 500px) {
   .group__step {
     display: flex;
     flex-direction: column;
