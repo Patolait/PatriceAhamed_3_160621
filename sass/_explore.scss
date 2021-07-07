@@ -21,7 +21,18 @@ form{
         color:$color-bottom;
         position: absolute;
         top:15px;
-        left:30%;
+        margin-left: 26%;
+        @media(max-width:320px){
+            margin-left: 10%;
+        }
+        
+        @media(min-width:$media-tab){
+            margin-left: 30%;
+        }
+        @media(min-width:$media-desk){
+            margin-left: 40%;
+        }
+
     }
 }
 

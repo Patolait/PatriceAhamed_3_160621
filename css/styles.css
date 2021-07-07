@@ -229,7 +229,22 @@ form .location {
   color: #353535;
   position: absolute;
   top: 15px;
-  left: 30%;
+  margin-left: 26%;
+}
+@media (max-width: 320px) {
+  form .location {
+    margin-left: 10%;
+  }
+}
+@media (min-width: 500px) {
+  form .location {
+    margin-left: 30%;
+  }
+}
+@media (min-width: 900px) {
+  form .location {
+    margin-left: 40%;
+  }
 }
 
 #reservation {
