@@ -1,12 +1,27 @@
 form{
+    position: relative;
     >input{  
         color: $color-bottom;  
         margin-bottom: 0px;
-        font-family:  "Font Awesome 5 Free", "Robotoregular";
+        font-family: "Robotoregular", serif;
         @include search;
-        content: "\f3c5";
         font-size: 1.1rem;
+        &:focus{
+            outline: none;
+            & + .location{
+                opacity: 0;
+                animation: infinite;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
 
+    .location{
+        font-size: 1.2rem;
+        color:$color-bottom;
+        position: absolute;
+        top:15px;
+        left:30%;
     }
 }
 
