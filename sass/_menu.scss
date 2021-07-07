@@ -131,7 +131,6 @@ figure{
                 &__title{
                     margin: 0px 10px;
                     width: 100%;
-
                     >h3{
                         @include h3-style(1.1rem);
                         white-space: nowrap;
@@ -141,7 +140,12 @@ figure{
                     @media(min-width:$media-tab){
                         font-size: 1.2rem;
                     }
+
                     &--2{
+                        >h3{
+                        @include h3-style(1.1rem);
+
+                        }
                         font-size: 1.1rem;
                         margin: 0px 10px;
                         width: 70%;

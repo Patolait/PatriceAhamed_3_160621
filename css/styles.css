@@ -757,6 +757,11 @@ figure > img {
   width: 70%;
   white-space: normal;
 }
+.menu__element__box__group__title--2 > h3 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 1.1rem;
+}
 @media (min-width: 500px) {
   .menu__element__box__group__title--2 {
     font-size: 1.2rem;
