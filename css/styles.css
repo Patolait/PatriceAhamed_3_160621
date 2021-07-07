@@ -311,18 +311,18 @@ form .location {
   }
 }
 
-@media (min-width: 900px) {
-  .group__step {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
 @media (min-width: 500px) {
   .group__step {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+}
+@media (min-width: 900px) {
+  .group__step {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 
@@ -333,17 +333,17 @@ form .location {
   display: flex;
   align-items: center;
 }
-@media (min-width: 900px) {
-  .step {
-    width: 30%;
-  }
-}
 @media (min-width: 500px) {
   .step {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 30px 30px;
+  }
+}
+@media (min-width: 900px) {
+  .step {
+    width: 30%;
   }
 }
 .step__number {
@@ -384,15 +384,15 @@ form .location {
   align-items: center;
   box-shadow: 0px 3px 10px #dddddd;
 }
-@media (min-width: 900px) {
-  .step__box {
-    width: 98%;
-  }
-}
 @media (min-width: 500px) {
   .step__box {
     position: static;
     width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  .step__box {
+    width: 98%;
   }
 }
 .step__box > i {
@@ -414,12 +414,6 @@ form .location {
   left: 75px;
   top: 30px;
 }
-@media (min-width: 900px) {
-  .step__box > span {
-    text-align: center;
-    position: static;
-  }
-}
 @media (min-width: 500px) {
   .step__box > span {
     text-align: center;
@@ -438,16 +432,16 @@ form .location {
   align-items: center;
   box-shadow: 0px 3px 10px #dddddd;
 }
-@media (min-width: 900px) {
-  .step__box--2 {
-    width: 98%;
-  }
-}
 @media (min-width: 500px) {
   .step__box--2 {
     position: static;
     width: 100%;
     margin: 0 20px;
+  }
+}
+@media (min-width: 900px) {
+  .step__box--2 {
+    width: 98%;
   }
 }
 .step__box--2 > i {
@@ -468,12 +462,6 @@ form .location {
   position: absolute;
   left: 75px;
   top: 30px;
-}
-@media (min-width: 900px) {
-  .step__box--2 > span {
-    text-align: center;
-    position: static;
-  }
 }
 @media (min-width: 500px) {
   .step__box--2 > span {

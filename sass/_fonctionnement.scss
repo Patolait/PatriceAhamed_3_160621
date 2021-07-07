@@ -18,15 +18,15 @@
 }
 
 .group__step{
-    @media (min-width: $media-desk){
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
     @media (min-width: $media-tab){
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    @media (min-width: $media-desk){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
     
 }
@@ -37,15 +37,14 @@
     margin: 10px 0 25px 0;
     display: flex;
     align-items: center;
-    @media (min-width: $media-desk) {
-        width: 30%;
-        
-    }
     @media (min-width: $media-tab){
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin: 30px 30px;
+    }
+    @media (min-width: $media-desk) {
+        width: 30%;
     }
 
     &__number{
@@ -72,13 +71,13 @@
         @include box($color-grey);
         @include center;
         @include shadow (10%);
-        @media (min-width: $media-desk) {
-            width: 98%;
-
-        }
         @media(min-width:$media-tab){
             position: static;
             width: 100%;
+        }
+        @media (min-width: $media-desk) {
+            width: 98%;
+
         }
  
         >i{
@@ -94,10 +93,6 @@
             position: absolute;
             left: 75px;
             top: 30px;
-            @media (min-width: $media-desk) {
-                text-align: center;
-                position: static;
-            } 
             @media (min-width: $media-tab) {
                 text-align: center;
                 position: static;
@@ -109,15 +104,16 @@
         @include box(lighten($color-first,37%));
         @include center;
         @include shadow (10%);
-        @media (min-width: $media-desk) {
-            width: 98%;
-
-        }
         @media(min-width:$media-tab){
             position: static;
             width: 100%;
             margin:0 20px;
         }
+        @media (min-width: $media-desk) {
+            width: 98%;
+
+        }
+        
         >i{
             @include icone($color-first, 1.2rem);
             @media (min-width:$media-tab){
@@ -130,10 +126,6 @@
             position: absolute;
             left: 75px;
             top: 30px;
-            @media (min-width: $media-desk) {
-                text-align: center;
-                position: static;
-            } 
             @media (min-width: $media-tab) {
                 text-align: center;
                 position: static;
