@@ -63,9 +63,7 @@
             left: 50%;
             top:-10px;
         }
-        @media(min-width: $media-desk){
-            left: 47%;
-        }
+        
     }
     &__box{
         @include box($color-grey);
@@ -113,7 +111,7 @@
             width: 98%;
 
         }
-        
+
         >i{
             @include icone($color-first, 1.2rem);
             @media (min-width:$media-tab){

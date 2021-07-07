@@ -367,11 +367,6 @@ form .location {
     top: -10px;
   }
 }
-@media (min-width: 900px) {
-  .step__number {
-    left: 47%;
-  }
-}
 .step__box {
   position: absolute;
   left: 10px;
