@@ -422,15 +422,9 @@ form .location {
   height: 70px;
   background-color: #f7f2fc;
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 3px 10px #dddddd;
 }
 @media (min-width: 500px) {
   .step__box--2 {
-    position: static;
-    width: 100%;
     margin: 0 20px;
   }
 }
@@ -445,24 +439,6 @@ form .location {
   position: absolute;
   left: 35px;
   top: 28px;
-}
-@media (min-width: 500px) {
-  .step__box--2 > i {
-    position: static;
-    margin-right: 20px;
-  }
-}
-.step__box--2 > span {
-  font-size: 1rem;
-  position: absolute;
-  left: 75px;
-  top: 30px;
-}
-@media (min-width: 500px) {
-  .step__box--2 > span {
-    text-align: center;
-    position: static;
-  }
 }
 
 #resto {
