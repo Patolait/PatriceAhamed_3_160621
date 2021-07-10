@@ -440,6 +440,12 @@ form .location {
   left: 35px;
   top: 28px;
 }
+@media (min-width: 500px) {
+  .step__box--2 > i {
+    position: static;
+    margin-right: 20px;
+  }
+}
 
 #resto {
   background-color: #f6f6f6;
