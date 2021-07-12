@@ -40,10 +40,12 @@ figure{
             text-align: center;
 
             /*Animation coeur*/
-            &:active{
-                animation: heart-base 550ms 260ms both;
+            &:hover{
+                animation: heart-base 550ms 260ms forwards;
+                animation-fill-mode: forwards;
                 > .menu__top__heart--2{
                     animation: heart-clic 550ms forwards;
+                    animation-fill-mode: forwards;
                 } 
             }
             &--2{

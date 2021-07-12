@@ -624,11 +624,13 @@ figure > img {
   /*Animation coeur*/
   /*Fin animation coeur*/
 }
-.menu__top__heart:active {
-  animation: heart-base 550ms 260ms both;
+.menu__top__heart:hover {
+  animation: heart-base 550ms 260ms forwards;
+  animation-fill-mode: forwards;
 }
-.menu__top__heart:active > .menu__top__heart--2 {
+.menu__top__heart:hover > .menu__top__heart--2 {
   animation: heart-clic 550ms forwards;
+  animation-fill-mode: forwards;
 }
 .menu__top__heart--2 {
   position: absolute;
