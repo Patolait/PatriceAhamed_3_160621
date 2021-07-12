@@ -81,7 +81,7 @@
                 width: 25px;
                 text-align: center;
 
-                &:active{
+                &:hover{
                     animation: heart-base 550ms 260ms both;
                     > .resto__heart--2{
                         animation: heart-clic 550ms forwards;
