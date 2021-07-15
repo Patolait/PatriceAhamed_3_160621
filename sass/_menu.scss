@@ -106,7 +106,7 @@ figure{
                 flex-wrap: wrap;
                 width: 100%;
                 position: relative;
-                &:active{
+                &:hover{
                     & + .check{
                         animation: box-check 500ms both;
                         i{

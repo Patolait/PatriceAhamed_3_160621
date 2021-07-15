@@ -712,25 +712,25 @@ figure > img {
   width: 100%;
   position: relative;
 }
-.menu__element__box__group:active + .check {
+.menu__element__box__group:hover + .check {
   animation: box-check 500ms both;
 }
-.menu__element__box__group:active + .check i {
+.menu__element__box__group:hover + .check i {
   animation: box-check-form 550ms both;
 }
-.menu__element__box__group:active + .check--2 {
+.menu__element__box__group:hover + .check--2 {
   animation: box-check 500ms both;
 }
-.menu__element__box__group:active + .check--2 i {
+.menu__element__box__group:hover + .check--2 i {
   animation: box-check-form 550ms both;
 }
-.menu__element__box__group:active .menu__element__box__group__anim__price {
+.menu__element__box__group:hover .menu__element__box__group__anim__price {
   animation: box-check-price 500ms 100ms both;
 }
-.menu__element__box__group:active .menu__element__box__group__anim__text {
+.menu__element__box__group:hover .menu__element__box__group__anim__text {
   animation: box-check-text 300ms 100ms both;
 }
-.menu__element__box__group:active .menu__element__box__group__title {
+.menu__element__box__group:hover .menu__element__box__group__title {
   animation: box-title 300ms 100ms both;
 }
 .menu__element__box__group__title {
